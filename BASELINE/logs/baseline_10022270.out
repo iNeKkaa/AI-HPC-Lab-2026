@@ -1,0 +1,239 @@
+slurmstepd: info: Setting TMPDIR to /scratch/10022270. Previous errors about TMPDIR can be discarded
+Node: c208-1
+Date: Sun Sep 27 03:46:20 PM CEST 2026
+SLURM job: 10022270
+Sun Sep 27 15:46:20 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.86.15              Driver Version: 570.86.15      CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-PCIE-40GB          On  |   00000000:98:00.0 Off |                    0 |
+| N/A   42C    P0             37W /  250W |       1MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+=== AI-HPC BASELINE ===
+Model: google-bert/bert-base-uncased
+Dataset: SQuAD 1.1
+Training subset: 10,000 examples
+Validation subset: 500 examples
+Epochs: 4
+Batch size: 12
+GPU count: 1
+Precision: FP32
+Start: Sun Sep 27 03:46:21 PM CEST 2026
+09/27/2026 15:46:52 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: False, 16-bits training: False
+09/27/2026 15:46:52 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=True,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=no,
+eval_use_gather_object=False,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=no,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=3e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/baseline_10k/runs/Sep27_15-46-51_c208-1,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=100,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=4.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/baseline_10k,
+overwrite_output_dir=True,
+parallelism_config=None,
+past_index=-1,
+per_device_eval_batch_size=12,
+per_device_train_batch_size=12,
+prediction_loss_only=False,
+project=huggingface,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=None,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=no,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trackio_space_id=trackio,
+use_cpu=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+09/27/2026 15:46:54 - INFO - datasets.builder - Found cached dataset squad (/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f)
+09/27/2026 15:46:55 - INFO - datasets.arrow_dataset - Caching processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-10778ed871e5415f.arrow
+09/27/2026 15:46:58 - INFO - datasets.arrow_dataset - Caching processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-6d035581d677f920.arrow
+09/27/2026 15:46:59 - WARNING - accelerate.utils.other - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 3.8118, 'grad_norm': 22.467622756958008, 'learning_rate': 2.9109712230215826e-05, 'epoch': 0.12}
+{'loss': 2.3917, 'grad_norm': 18.734228134155273, 'learning_rate': 2.821043165467626e-05, 'epoch': 0.24}
+{'loss': 1.9348, 'grad_norm': 15.291231155395508, 'learning_rate': 2.7311151079136692e-05, 'epoch': 0.36}
+{'loss': 1.7497, 'grad_norm': 28.556934356689453, 'learning_rate': 2.641187050359712e-05, 'epoch': 0.48}
+{'loss': 1.5121, 'grad_norm': 13.795104026794434, 'learning_rate': 2.5512589928057554e-05, 'epoch': 0.6}
+{'loss': 1.4186, 'grad_norm': 26.21894073486328, 'learning_rate': 2.4613309352517987e-05, 'epoch': 0.72}
+{'loss': 1.4712, 'grad_norm': 19.00004005432129, 'learning_rate': 2.3714028776978417e-05, 'epoch': 0.84}
+{'loss': 1.3329, 'grad_norm': 19.361177444458008, 'learning_rate': 2.281474820143885e-05, 'epoch': 0.96}
+{'loss': 1.1325, 'grad_norm': 11.593330383300781, 'learning_rate': 2.1915467625899282e-05, 'epoch': 1.08}
+{'loss': 0.9049, 'grad_norm': 16.50214385986328, 'learning_rate': 2.1016187050359712e-05, 'epoch': 1.2}
+{'loss': 0.9345, 'grad_norm': 19.70804786682129, 'learning_rate': 2.0116906474820145e-05, 'epoch': 1.32}
+{'loss': 0.8569, 'grad_norm': 20.49196434020996, 'learning_rate': 1.9217625899280578e-05, 'epoch': 1.44}
+{'loss': 0.8337, 'grad_norm': 16.1453800201416, 'learning_rate': 1.8318345323741007e-05, 'epoch': 1.56}
+{'loss': 0.8733, 'grad_norm': 11.121024131774902, 'learning_rate': 1.741906474820144e-05, 'epoch': 1.68}
+{'loss': 0.8712, 'grad_norm': 20.619455337524414, 'learning_rate': 1.6519784172661873e-05, 'epoch': 1.8}
+{'loss': 0.9462, 'grad_norm': 13.783856391906738, 'learning_rate': 1.5620503597122302e-05, 'epoch': 1.92}
+{'loss': 0.8022, 'grad_norm': 16.6495361328125, 'learning_rate': 1.4721223021582733e-05, 'epoch': 2.04}
+{'loss': 0.5296, 'grad_norm': 25.658388137817383, 'learning_rate': 1.3821942446043166e-05, 'epoch': 2.16}
+{'loss': 0.5174, 'grad_norm': 13.345985412597656, 'learning_rate': 1.2922661870503597e-05, 'epoch': 2.28}
+{'loss': 0.469, 'grad_norm': 11.053399085998535, 'learning_rate': 1.2023381294964029e-05, 'epoch': 2.4}
+{'loss': 0.5149, 'grad_norm': 24.309267044067383, 'learning_rate': 1.1124100719424461e-05, 'epoch': 2.52}
+{'loss': 0.5387, 'grad_norm': 19.241605758666992, 'learning_rate': 1.0224820143884893e-05, 'epoch': 2.64}
+{'loss': 0.5369, 'grad_norm': 14.345149040222168, 'learning_rate': 9.325539568345324e-06, 'epoch': 2.76}
+{'loss': 0.51, 'grad_norm': 21.006126403808594, 'learning_rate': 8.426258992805755e-06, 'epoch': 2.88}
+{'loss': 0.5056, 'grad_norm': 18.472551345825195, 'learning_rate': 7.526978417266187e-06, 'epoch': 3.0}
+{'loss': 0.3179, 'grad_norm': 17.7650146484375, 'learning_rate': 6.627697841726618e-06, 'epoch': 3.12}
+{'loss': 0.3078, 'grad_norm': 14.60308837890625, 'learning_rate': 5.728417266187051e-06, 'epoch': 3.24}
+{'loss': 0.316, 'grad_norm': 14.05394172668457, 'learning_rate': 4.829136690647482e-06, 'epoch': 3.36}
+{'loss': 0.3076, 'grad_norm': 15.545063018798828, 'learning_rate': 3.929856115107913e-06, 'epoch': 3.48}
+{'loss': 0.3144, 'grad_norm': 12.16198444366455, 'learning_rate': 3.0305755395683453e-06, 'epoch': 3.6}
+{'loss': 0.2761, 'grad_norm': 5.796847343444824, 'learning_rate': 2.1312949640287773e-06, 'epoch': 3.72}
+{'loss': 0.2951, 'grad_norm': 4.004210472106934, 'learning_rate': 1.2320143884892087e-06, 'epoch': 3.84}
+{'loss': 0.3026, 'grad_norm': 10.973491668701172, 'learning_rate': 3.327338129496403e-07, 'epoch': 3.96}
+{'train_runtime': 649.1851, 'train_samples_per_second': 61.616, 'train_steps_per_second': 5.139, 'train_loss': 0.9136357696222173, 'init_mem_cpu_alloc_delta': 88129536, 'init_mem_gpu_alloc_delta': 436713984, 'init_mem_cpu_peaked_delta': 434655232, 'init_mem_gpu_peaked_delta': 0, 'train_mem_cpu_alloc_delta': 514826240, 'train_mem_gpu_alloc_delta': 915656192, 'train_mem_cpu_peaked_delta': 0, 'train_mem_gpu_peaked_delta': 2957731328, 'before_init_mem_cpu': 834764800, 'before_init_mem_gpu': 0, 'epoch': 4.0}
+***** train metrics *****
+  before_init_mem_cpu        =      796MB
+  before_init_mem_gpu        =        0MB
+  epoch                      =        4.0
+  init_mem_cpu_alloc_delta   =       84MB
+  init_mem_cpu_peaked_delta  =      414MB
+  init_mem_gpu_alloc_delta   =      416MB
+  init_mem_gpu_peaked_delta  =        0MB
+  total_flos                 =  7300547GF
+  train_loss                 =     0.9136
+  train_mem_cpu_alloc_delta  =      490MB
+  train_mem_cpu_peaked_delta =        0MB
+  train_mem_gpu_alloc_delta  =      873MB
+  train_mem_gpu_peaked_delta =     2820MB
+  train_runtime              = 0:10:49.18
+  train_samples              =      10000
+  train_samples_per_second   =     61.616
+  train_steps_per_second     =      5.139
+09/27/2026 15:57:54 - INFO - __main__ - *** Evaluate ***
+09/27/2026 15:57:56 - INFO - utils_qa - Post-processing 500 example predictions split into 500 features.
+09/27/2026 15:57:56 - INFO - utils_qa - Saving predictions to /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/baseline_10k/eval_predictions.json.
+09/27/2026 15:57:56 - INFO - utils_qa - Saving nbest_preds to /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/baseline_10k/eval_nbest_predictions.json.
+***** eval metrics *****
+  epoch                   =        4.0
+  eval_exact_match        =       74.0
+  eval_f1                 =     78.552
+  eval_runtime            = 0:00:02.47
+  eval_samples            =        500
+  eval_samples_per_second =    202.081
+  eval_steps_per_second   =     16.975
+End: Sun Sep 27 03:57:59 PM CEST 2026
+Total wall-clock time: 698 seconds
+Total wall-clock time: 11 min 38 s

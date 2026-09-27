@@ -1,0 +1,7 @@
+BASELINE_dev_backup/
+__pycache__/
+*.pyc
+*.safetensors
+*.pt
+*.pth
+.DS_Store
