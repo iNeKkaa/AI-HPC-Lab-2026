@@ -1,5 +1,6 @@
 # AI-HPC Lab - BASELINE
 
+Antoine Metz @iNeKkaa | Thierry Berard @ThryB64
 ## Setup
 
 The baseline was run on FT3 using one NVIDIA A100 GPU.
