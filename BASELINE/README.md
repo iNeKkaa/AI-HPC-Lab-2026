@@ -94,7 +94,7 @@ SLURM job: `10022270`
 | F1 | 78.552 |
 | GPU peak memory delta | ~2820 MB |
 
-TensorBoard logging was enabled during the training.
+TensorBoard logging was enabled during the training. More detailed profiling will be included in the distributed part of the project.
 
 The training loss decreased during the four epochs, from values above 3 at the beginning to around 0.3 near the end.
 
