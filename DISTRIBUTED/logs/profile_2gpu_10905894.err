@@ -1,0 +1,134 @@
+cesga/2020 unloaded
+        Preparing the environment for use of the CESGA 2020 software stack.
+        Please rebuild modules cache: module --ignore-cache avail
+     
+cesga/2020 loaded
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) cesga/2020
+python/3.10.8 loaded
+Found cached dataset squad (/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f)
+[INFO|configuration_utils.py:765] 2026-10-21 18:43:45,427 >> loading configuration file config.json from cache at /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/hf_cache/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/config.json
+[INFO|configuration_utils.py:839] 2026-10-21 18:43:45,541 >> Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.57.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|configuration_utils.py:765] 2026-10-21 18:43:45,737 >> loading configuration file config.json from cache at /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/hf_cache/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/config.json
+[INFO|configuration_utils.py:839] 2026-10-21 18:43:45,738 >> Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.57.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|tokenization_utils_base.py:2095] 2026-10-21 18:43:45,928 >> loading file vocab.txt from cache at /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/hf_cache/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/vocab.txt
+[INFO|tokenization_utils_base.py:2095] 2026-10-21 18:43:45,928 >> loading file tokenizer.json from cache at /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/hf_cache/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/tokenizer.json
+[INFO|tokenization_utils_base.py:2095] 2026-10-21 18:43:45,928 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:2095] 2026-10-21 18:43:45,928 >> loading file special_tokens_map.json from cache at None
+[INFO|tokenization_utils_base.py:2095] 2026-10-21 18:43:45,928 >> loading file tokenizer_config.json from cache at /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/hf_cache/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2095] 2026-10-21 18:43:45,928 >> loading file chat_template.jinja from cache at None
+[INFO|configuration_utils.py:765] 2026-10-21 18:43:45,931 >> loading configuration file config.json from cache at /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/hf_cache/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/config.json
+[INFO|configuration_utils.py:839] 2026-10-21 18:43:45,932 >> Model config BertConfig {
+  "architectures": [
+    "BertForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pad_token_id": 0,
+  "position_embedding_type": "absolute",
+  "transformers_version": "4.57.1",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 30522
+}
+
+[INFO|modeling_utils.py:1172] 2026-10-21 18:43:46,677 >> loading weights file model.safetensors from cache at /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/hf_cache/hub/models--google-bert--bert-base-uncased/snapshots/86b5e0934494bd15c9632b12f734a8a67f723594/model.safetensors
+[INFO|logging.py:343] 2026-10-21 18:43:47,600 >> A pretrained model of type `BertForQuestionAnswering` contains parameters that have been renamed internally (a few are listed below but more are present in the model):
+* `cls.predictions.transform.LayerNorm.beta` -> `cls.predictions.transform.LayerNorm.bias`
+* `cls.predictions.transform.LayerNorm.gamma` -> `cls.predictions.transform.LayerNorm.weight`
+If you are using a model from the Hub, consider submitting a PR to adjust these weights and help future users.
+[INFO|modeling_utils.py:5525] 2026-10-21 18:43:49,989 >> Some weights of the model checkpoint at google-bert/bert-base-uncased were not used when initializing BertForQuestionAnswering: ['bert.pooler.dense.bias', 'bert.pooler.dense.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForQuestionAnswering from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForQuestionAnswering from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[WARNING|modeling_utils.py:5535] 2026-10-21 18:43:49,989 >> Some weights of BertForQuestionAnswering were not initialized from the model checkpoint at google-bert/bert-base-uncased and are newly initialized: ['qa_outputs.bias', 'qa_outputs.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[WARNING|modeling_utils.py:5535] 2026-10-21 18:43:49,989 >> Some weights of BertForQuestionAnswering were not initialized from the model checkpoint at google-bert/bert-base-uncased and are newly initialized: ['qa_outputs.bias', 'qa_outputs.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Running tokenizer on train dataset:   0%|          | 0/512 [00:00<?, ? examples/s][rank1]:[W1021 18:43:50.444990082 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+Caching processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-1210f84dc37b0b1f.arrow
+Running tokenizer on train dataset: 100%|██████████| 512/512 [00:00<00:00, 1130.45 examples/s]Running tokenizer on train dataset: 100%|██████████| 512/512 [00:00<00:00, 1045.42 examples/s]
+[rank0]:[W1021 18:43:50.080084845 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[INFO|trainer.py:699] 2026-10-21 18:43:59,327 >> max_steps is given, it will override any value given in num_train_epochs
+[INFO|trainer.py:2519] 2026-10-21 18:44:00,049 >> ***** Running training *****
+[INFO|trainer.py:2520] 2026-10-21 18:44:00,049 >>   Num examples = 512
+[INFO|trainer.py:2521] 2026-10-21 18:44:00,049 >>   Num Epochs = 1
+[INFO|trainer.py:2522] 2026-10-21 18:44:00,049 >>   Instantaneous batch size per device = 6
+[INFO|trainer.py:2525] 2026-10-21 18:44:00,049 >>   Total train batch size (w. parallel, distributed & accumulation) = 12
+[INFO|trainer.py:2526] 2026-10-21 18:44:00,049 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:2527] 2026-10-21 18:44:00,049 >>   Total optimization steps = 8
+[INFO|trainer.py:2528] 2026-10-21 18:44:00,050 >>   Number of trainable parameters = 108,893,186
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:07<00:49,  7.13s/it]                                              12%|█▎        | 1/8 [00:07<00:49,  7.13s/it] 25%|██▌       | 2/8 [00:07<00:18,  3.07s/it]                                              25%|██▌       | 2/8 [00:07<00:18,  3.07s/it] 38%|███▊      | 3/8 [00:07<00:08,  1.78s/it]                                              38%|███▊      | 3/8 [00:07<00:08,  1.78s/it] 50%|█████     | 4/8 [00:07<00:04,  1.12s/it]                                              50%|█████     | 4/8 [00:07<00:04,  1.12s/it] 62%|██████▎   | 5/8 [00:07<00:02,  1.31it/s]                                              62%|██████▎   | 5/8 [00:07<00:02,  1.31it/s] 75%|███████▌  | 6/8 [00:13<00:04,  2.42s/it]                                              75%|███████▌  | 6/8 [00:13<00:04,  2.42s/it] 88%|████████▊ | 7/8 [00:13<00:01,  1.70s/it]                                              88%|████████▊ | 7/8 [00:13<00:01,  1.70s/it]100%|██████████| 8/8 [00:13<00:00,  1.20s/it]                                             100%|██████████| 8/8 [00:13<00:00,  1.20s/it][INFO|trainer.py:2810] 2026-10-21 18:44:13,882 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+                                             100%|██████████| 8/8 [00:13<00:00,  1.20s/it]100%|██████████| 8/8 [00:13<00:00,  1.73s/it]
+[INFO|trainer.py:4309] 2026-10-21 18:44:13,886 >> Saving model checkpoint to /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/ddp_2gpu_profile
+[INFO|configuration_utils.py:491] 2026-10-21 18:44:13,893 >> Configuration saved in /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/ddp_2gpu_profile/config.json
+[INFO|modeling_utils.py:4181] 2026-10-21 18:44:15,119 >> Model weights saved in /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/ddp_2gpu_profile/model.safetensors
+[INFO|tokenization_utils_base.py:2590] 2026-10-21 18:44:15,134 >> tokenizer config file saved in /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/ddp_2gpu_profile/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2599] 2026-10-21 18:44:15,138 >> Special tokens file saved in /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/ddp_2gpu_profile/special_tokens_map.json
+[INFO|modelcard.py:456] 2026-10-21 18:44:15,353 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Question Answering', 'type': 'question-answering'}, 'dataset': {'name': 'squad', 'type': 'squad'}}
+[rank0]:[W1021 18:44:15.307585959 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
