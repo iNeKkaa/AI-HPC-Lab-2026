@@ -1,0 +1,4 @@
+gpus,nodes,train_time_s,wall_time_s,throughput_samples_s,speedup,efficiency
+1,1,649.19,698,61.616,1.000,1.000
+2,1,419.01,563,95.463,1.549,0.775
+4,2,325.22,423,122.992,1.996,0.499
