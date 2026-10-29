@@ -1,0 +1,368 @@
+slurmstepd: info: Setting TMPDIR to /scratch/11062634. Previous errors about TMPDIR can be discarded
+SLURM job: 11062634
+Nodes:
+a100-17
+a100-20
+Master: a100-17:22634
+AI-HPC DISTRIBUTED - FSDP MULTI-NODE
+Model: google-bert/bert-base-uncased
+Node rank 1 running on c208-4
+Dataset: SQuAD 1.1
+Training subset: 10,000 examples
+Validation subset: 500 examples
+Epochs: 4
+Nodes: 2
+GPUs per node: 2
+Total GPUs: 4
+Batch size per GPU: 3
+Global batch size: 12
+FSDP strategy: full_shard
+Precision: FP32
+Master: a100-17:22634
+Start: Thu Oct 29 02:41:15 AM CET 2026
+Node rank 0 running on c208-1
+10/29/2026 02:41:32 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, 16-bits training: False
+10/29/2026 02:41:32 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=True,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=nccl,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=no,
+eval_use_gather_object=False,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[<FSDPOption.FULL_SHARD: 'full_shard'>, <FSDPOption.AUTO_WRAP: 'auto_wrap'>],
+fsdp_config={'transformer_layer_cls_to_wrap': ['BertLayer'], 'backward_prefetch': 'backward_pre', 'forward_prefetch': False, 'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=no,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=3e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/fsdp_4gpu/runs/Oct29_02-41-32_c208-4,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=100,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=4.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/fsdp_4gpu,
+overwrite_output_dir=True,
+parallelism_config=None,
+past_index=-1,
+per_device_eval_batch_size=3,
+per_device_train_batch_size=3,
+prediction_loss_only=False,
+project=huggingface,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=None,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=no,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trackio_space_id=trackio,
+use_cpu=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+10/29/2026 02:41:32 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, 16-bits training: False
+10/29/2026 02:41:32 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=True,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=nccl,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=no,
+eval_use_gather_object=False,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[<FSDPOption.FULL_SHARD: 'full_shard'>, <FSDPOption.AUTO_WRAP: 'auto_wrap'>],
+fsdp_config={'transformer_layer_cls_to_wrap': ['BertLayer'], 'backward_prefetch': 'backward_pre', 'forward_prefetch': False, 'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=no,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=3e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/fsdp_4gpu/runs/Oct29_02-41-32_c208-1,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=100,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=4.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/fsdp_4gpu,
+overwrite_output_dir=True,
+parallelism_config=None,
+past_index=-1,
+per_device_eval_batch_size=3,
+per_device_train_batch_size=3,
+prediction_loss_only=False,
+project=huggingface,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=None,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=no,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trackio_space_id=trackio,
+use_cpu=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+10/29/2026 02:41:32 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, 16-bits training: False
+10/29/2026 02:41:32 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, 16-bits training: False
+10/29/2026 02:41:35 - INFO - datasets.builder - Found cached dataset squad (/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f)
+10/29/2026 02:41:35 - INFO - datasets.builder - Found cached dataset squad (/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f)
+10/29/2026 02:41:35 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-10778ed871e5415f_*_of_00001.arrow
+10/29/2026 02:41:35 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-10778ed871e5415f_*_of_00001.arrow
+10/29/2026 02:41:36 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-2f4be69a783652da_*_of_00001.arrow
+10/29/2026 02:41:36 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-2f4be69a783652da_*_of_00001.arrow
+10/29/2026 02:41:37 - WARNING - accelerate.utils.other - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 3.7373, 'grad_norm': 26.156875610351562, 'learning_rate': 2.9109712230215826e-05, 'epoch': 0.12}
+{'loss': 2.4056, 'grad_norm': 22.901132583618164, 'learning_rate': 2.821043165467626e-05, 'epoch': 0.24}
+{'loss': 1.9765, 'grad_norm': 14.477117538452148, 'learning_rate': 2.7311151079136692e-05, 'epoch': 0.36}
+{'loss': 1.7208, 'grad_norm': 25.409521102905273, 'learning_rate': 2.641187050359712e-05, 'epoch': 0.48}
+{'loss': 1.4994, 'grad_norm': 15.038117408752441, 'learning_rate': 2.5512589928057554e-05, 'epoch': 0.6}
+{'loss': 1.4593, 'grad_norm': 16.11098289489746, 'learning_rate': 2.4613309352517987e-05, 'epoch': 0.72}
+{'loss': 1.4902, 'grad_norm': 15.479887962341309, 'learning_rate': 2.3714028776978417e-05, 'epoch': 0.84}
+{'loss': 1.325, 'grad_norm': 18.67325210571289, 'learning_rate': 2.281474820143885e-05, 'epoch': 0.96}
+{'loss': 1.133, 'grad_norm': 15.611881256103516, 'learning_rate': 2.1915467625899282e-05, 'epoch': 1.08}
+{'loss': 0.8985, 'grad_norm': 17.475919723510742, 'learning_rate': 2.1016187050359712e-05, 'epoch': 1.2}
+{'loss': 0.9153, 'grad_norm': 21.302305221557617, 'learning_rate': 2.0116906474820145e-05, 'epoch': 1.32}
+{'loss': 0.8735, 'grad_norm': 19.146133422851562, 'learning_rate': 1.9217625899280578e-05, 'epoch': 1.44}
+{'loss': 0.8378, 'grad_norm': 19.52191162109375, 'learning_rate': 1.8318345323741007e-05, 'epoch': 1.56}
+{'loss': 0.8399, 'grad_norm': 10.415943145751953, 'learning_rate': 1.741906474820144e-05, 'epoch': 1.68}
+{'loss': 0.8698, 'grad_norm': 16.221830368041992, 'learning_rate': 1.6519784172661873e-05, 'epoch': 1.8}
+{'loss': 0.9144, 'grad_norm': 18.527923583984375, 'learning_rate': 1.5620503597122302e-05, 'epoch': 1.92}
+{'loss': 0.7665, 'grad_norm': 10.305803298950195, 'learning_rate': 1.4721223021582733e-05, 'epoch': 2.04}
+{'loss': 0.507, 'grad_norm': 26.29303550720215, 'learning_rate': 1.3821942446043166e-05, 'epoch': 2.16}
+{'loss': 0.5072, 'grad_norm': 11.163217544555664, 'learning_rate': 1.2922661870503597e-05, 'epoch': 2.28}
+{'loss': 0.4557, 'grad_norm': 20.88741683959961, 'learning_rate': 1.2023381294964029e-05, 'epoch': 2.4}
+{'loss': 0.4948, 'grad_norm': 4.391303062438965, 'learning_rate': 1.1124100719424461e-05, 'epoch': 2.52}
+{'loss': 0.537, 'grad_norm': 20.567049026489258, 'learning_rate': 1.0224820143884893e-05, 'epoch': 2.64}
+{'loss': 0.5225, 'grad_norm': 9.803018569946289, 'learning_rate': 9.325539568345324e-06, 'epoch': 2.76}
+{'loss': 0.5141, 'grad_norm': 16.725854873657227, 'learning_rate': 8.426258992805755e-06, 'epoch': 2.88}
+{'loss': 0.4881, 'grad_norm': 21.505884170532227, 'learning_rate': 7.526978417266187e-06, 'epoch': 3.0}
+{'loss': 0.3338, 'grad_norm': 13.44530200958252, 'learning_rate': 6.627697841726618e-06, 'epoch': 3.12}
+{'loss': 0.3008, 'grad_norm': 16.800539016723633, 'learning_rate': 5.728417266187051e-06, 'epoch': 3.24}
+{'loss': 0.344, 'grad_norm': 16.901521682739258, 'learning_rate': 4.829136690647482e-06, 'epoch': 3.36}
+{'loss': 0.3149, 'grad_norm': 18.881547927856445, 'learning_rate': 3.929856115107913e-06, 'epoch': 3.48}
+{'loss': 0.3245, 'grad_norm': 6.102499008178711, 'learning_rate': 3.0305755395683453e-06, 'epoch': 3.6}
+{'loss': 0.2904, 'grad_norm': 8.823486328125, 'learning_rate': 2.1312949640287773e-06, 'epoch': 3.72}
+{'loss': 0.2951, 'grad_norm': 9.184950828552246, 'learning_rate': 1.2320143884892087e-06, 'epoch': 3.84}
+{'loss': 0.3068, 'grad_norm': 20.751426696777344, 'learning_rate': 3.327338129496403e-07, 'epoch': 3.96}
+{'train_runtime': 402.0622, 'train_samples_per_second': 99.487, 'train_steps_per_second': 8.297, 'train_loss': 0.9088972629688913, 'init_mem_cpu_alloc_delta': 2256896, 'init_mem_gpu_alloc_delta': 0, 'init_mem_cpu_peaked_delta': 0, 'init_mem_gpu_peaked_delta': 0, 'train_mem_cpu_alloc_delta': 499978240, 'train_mem_gpu_alloc_delta': 460315136, 'train_mem_cpu_peaked_delta': 0, 'train_mem_gpu_peaked_delta': 797378048, 'before_init_mem_cpu': 1466875904, 'before_init_mem_gpu': 512, 'epoch': 4.0}
+10/29/2026 02:48:21 - INFO - __main__ - *** Evaluate ***
+***** train metrics *****
+  before_init_mem_cpu        =     1398MB
+  before_init_mem_gpu        =        0MB
+  epoch                      =        4.0
+  init_mem_cpu_alloc_delta   =        2MB
+  init_mem_cpu_peaked_delta  =        0MB
+  init_mem_gpu_alloc_delta   =        0MB
+  init_mem_gpu_peaked_delta  =        0MB
+  total_flos                 =  1826596GF
+  train_loss                 =     0.9089
+  train_mem_cpu_alloc_delta  =      476MB
+  train_mem_cpu_peaked_delta =        0MB
+  train_mem_gpu_alloc_delta  =      438MB
+  train_mem_gpu_peaked_delta =      760MB
+  train_runtime              = 0:06:42.06
+  train_samples              =      10000
+  train_samples_per_second   =     99.487
+  train_steps_per_second     =      8.297
+10/29/2026 02:48:23 - INFO - __main__ - *** Evaluate ***
+10/29/2026 02:48:24 - INFO - utils_qa - Post-processing 500 example predictions split into 500 features.
+10/29/2026 02:48:24 - INFO - utils_qa - Saving predictions to /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/fsdp_4gpu/eval_predictions.json.
+10/29/2026 02:48:24 - INFO - utils_qa - Saving nbest_preds to /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/fsdp_4gpu/eval_nbest_predictions.json.
+***** eval metrics *****
+  epoch                   =        4.0
+  eval_exact_match        =       76.8
+  eval_f1                 =    80.3916
+  eval_runtime            = 0:00:01.38
+  eval_samples            =        500
+  eval_samples_per_second =     360.49
+  eval_steps_per_second   =     30.281
+End: Thu Oct 29 02:48:26 AM CET 2026
+Total wall-clock time: 431 seconds
+Total wall-clock time: 7 min 11 s

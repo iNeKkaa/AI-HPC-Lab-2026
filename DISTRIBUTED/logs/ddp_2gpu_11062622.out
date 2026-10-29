@@ -1,0 +1,245 @@
+slurmstepd: info: Setting TMPDIR to /scratch/11062622. Previous errors about TMPDIR can be discarded
+Node: c207-4
+Date: Wed Oct 28 08:57:52 PM CET 2026
+SLURM job: 11062622
+Wed Oct 28 20:57:52 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-PCIE-40GB          On  |   00000000:17:00.0 Off |                    0 |
+| N/A   49C    P0             36W /  250W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100-PCIE-40GB          On  |   00000000:98:00.0 Off |                    0 |
+| N/A   53C    P0             47W /  250W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+AI-HPC DISTRIBUTED - DDP
+Model: google-bert/bert-base-uncased
+Dataset: SQuAD 1.1
+Training subset: 10,000 examples
+Validation subset: 500 examples
+Epochs: 4
+GPUs: 2
+Batch size per GPU: 6
+Global batch size: 12
+Precision: FP32
+Start: Wed Oct 28 08:57:53 PM CET 2026
+10/28/2026 20:58:03 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1, distributed training: True, 16-bits training: False
+10/28/2026 20:58:03 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=True,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=nccl,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=False,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=no,
+eval_use_gather_object=False,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=no,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=3e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/ddp_2gpu/runs/Oct28_20-58-02_c207-4,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=100,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=4.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/ddp_2gpu,
+overwrite_output_dir=True,
+parallelism_config=None,
+past_index=-1,
+per_device_eval_batch_size=6,
+per_device_train_batch_size=6,
+prediction_loss_only=False,
+project=huggingface,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=None,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=no,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trackio_space_id=trackio,
+use_cpu=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+10/28/2026 20:58:03 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1, distributed training: True, 16-bits training: False
+10/28/2026 20:58:05 - INFO - datasets.builder - Found cached dataset squad (/mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f)
+10/28/2026 20:58:06 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-10778ed871e5415f_*_of_00001.arrow
+10/28/2026 20:58:06 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /mnt/netapp2/Store_uni/home/ulc/cursos/curso368/hf_cache/datasets/squad/plain_text/0.0.0/7b6d24c440a36b6815f21b70d25016731768db1f/cache-2f4be69a783652da_*_of_00001.arrow
+10/28/2026 20:58:07 - WARNING - accelerate.utils.other - Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 3.7676, 'grad_norm': 42.722450256347656, 'learning_rate': 2.9109712230215826e-05, 'epoch': 0.12}
+{'loss': 2.4097, 'grad_norm': 19.99676513671875, 'learning_rate': 2.821043165467626e-05, 'epoch': 0.24}
+{'loss': 1.9072, 'grad_norm': 14.254572868347168, 'learning_rate': 2.7311151079136692e-05, 'epoch': 0.36}
+{'loss': 1.7374, 'grad_norm': 26.498449325561523, 'learning_rate': 2.641187050359712e-05, 'epoch': 0.48}
+{'loss': 1.4917, 'grad_norm': 19.14651870727539, 'learning_rate': 2.5512589928057554e-05, 'epoch': 0.6}
+{'loss': 1.458, 'grad_norm': 20.756025314331055, 'learning_rate': 2.4613309352517987e-05, 'epoch': 0.72}
+{'loss': 1.4353, 'grad_norm': 17.796573638916016, 'learning_rate': 2.3714028776978417e-05, 'epoch': 0.84}
+{'loss': 1.3376, 'grad_norm': 18.91048812866211, 'learning_rate': 2.281474820143885e-05, 'epoch': 0.96}
+{'loss': 1.1198, 'grad_norm': 9.78564167022705, 'learning_rate': 2.1915467625899282e-05, 'epoch': 1.08}
+{'loss': 0.907, 'grad_norm': 19.97636604309082, 'learning_rate': 2.1016187050359712e-05, 'epoch': 1.2}
+{'loss': 0.9018, 'grad_norm': 24.19586181640625, 'learning_rate': 2.0116906474820145e-05, 'epoch': 1.32}
+{'loss': 0.87, 'grad_norm': 18.745830535888672, 'learning_rate': 1.9217625899280578e-05, 'epoch': 1.44}
+{'loss': 0.8235, 'grad_norm': 14.516772270202637, 'learning_rate': 1.8318345323741007e-05, 'epoch': 1.56}
+{'loss': 0.8433, 'grad_norm': 15.351640701293945, 'learning_rate': 1.741906474820144e-05, 'epoch': 1.68}
+{'loss': 0.8761, 'grad_norm': 17.891555786132812, 'learning_rate': 1.6519784172661873e-05, 'epoch': 1.8}
+{'loss': 0.9355, 'grad_norm': 21.174848556518555, 'learning_rate': 1.5620503597122302e-05, 'epoch': 1.92}
+{'loss': 0.7713, 'grad_norm': 10.880025863647461, 'learning_rate': 1.4721223021582733e-05, 'epoch': 2.04}
+{'loss': 0.5095, 'grad_norm': 18.717239379882812, 'learning_rate': 1.3821942446043166e-05, 'epoch': 2.16}
+{'loss': 0.5067, 'grad_norm': 10.878734588623047, 'learning_rate': 1.2922661870503597e-05, 'epoch': 2.28}
+{'loss': 0.4746, 'grad_norm': 13.004854202270508, 'learning_rate': 1.2023381294964029e-05, 'epoch': 2.4}
+{'loss': 0.4652, 'grad_norm': 23.393884658813477, 'learning_rate': 1.1124100719424461e-05, 'epoch': 2.52}
+{'loss': 0.5274, 'grad_norm': 24.18174171447754, 'learning_rate': 1.0224820143884893e-05, 'epoch': 2.64}
+{'loss': 0.5293, 'grad_norm': 7.096671104431152, 'learning_rate': 9.325539568345324e-06, 'epoch': 2.76}
+{'loss': 0.5027, 'grad_norm': 20.183338165283203, 'learning_rate': 8.426258992805755e-06, 'epoch': 2.88}
+{'loss': 0.4943, 'grad_norm': 13.878752708435059, 'learning_rate': 7.526978417266187e-06, 'epoch': 3.0}
+{'loss': 0.3241, 'grad_norm': 18.552932739257812, 'learning_rate': 6.627697841726618e-06, 'epoch': 3.12}
+{'loss': 0.3163, 'grad_norm': 9.391875267028809, 'learning_rate': 5.728417266187051e-06, 'epoch': 3.24}
+{'loss': 0.3266, 'grad_norm': 16.699050903320312, 'learning_rate': 4.829136690647482e-06, 'epoch': 3.36}
+{'loss': 0.3156, 'grad_norm': 16.833139419555664, 'learning_rate': 3.929856115107913e-06, 'epoch': 3.48}
+{'loss': 0.3058, 'grad_norm': 5.218861103057861, 'learning_rate': 3.0305755395683453e-06, 'epoch': 3.6}
+{'loss': 0.2929, 'grad_norm': 10.090093612670898, 'learning_rate': 2.1312949640287773e-06, 'epoch': 3.72}
+{'loss': 0.3052, 'grad_norm': 16.636695861816406, 'learning_rate': 1.2320143884892087e-06, 'epoch': 3.84}
+{'loss': 0.2899, 'grad_norm': 13.342965126037598, 'learning_rate': 3.327338129496403e-07, 'epoch': 3.96}
+{'train_runtime': 413.0382, 'train_samples_per_second': 96.843, 'train_steps_per_second': 8.077, 'train_loss': 0.9057631078098032, 'init_mem_cpu_alloc_delta': -2748416, 'init_mem_gpu_alloc_delta': 436713984, 'init_mem_cpu_peaked_delta': 430395392, 'init_mem_gpu_peaked_delta': 0, 'train_mem_cpu_alloc_delta': 463921152, 'train_mem_gpu_alloc_delta': 1344068608, 'train_mem_cpu_peaked_delta': 0, 'train_mem_gpu_peaked_delta': 1494788608, 'before_init_mem_cpu': 1059549184, 'before_init_mem_gpu': 512, 'epoch': 4.0}
+***** train metrics *****
+  before_init_mem_cpu        =     1010MB
+  before_init_mem_gpu        =        0MB
+  epoch                      =        4.0
+  init_mem_cpu_alloc_delta   =       -3MB
+  init_mem_cpu_peaked_delta  =      410MB
+  init_mem_gpu_alloc_delta   =      416MB
+  init_mem_gpu_peaked_delta  =        0MB
+  total_flos                 =  7306387GF
+  train_loss                 =     0.9058
+  train_mem_cpu_alloc_delta  =      442MB
+  train_mem_cpu_peaked_delta =        0MB
+  train_mem_gpu_alloc_delta  =     1281MB
+  train_mem_gpu_peaked_delta =     1425MB
+  train_runtime              = 0:06:53.03
+  train_samples              =      10000
+  train_samples_per_second   =     96.843
+  train_steps_per_second     =      8.077
+10/28/2026 21:05:02 - INFO - __main__ - *** Evaluate ***
+10/28/2026 21:05:03 - INFO - utils_qa - Post-processing 500 example predictions split into 500 features.
+10/28/2026 21:05:04 - INFO - utils_qa - Saving predictions to /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/ddp_2gpu/eval_predictions.json.
+10/28/2026 21:05:04 - INFO - utils_qa - Saving nbest_preds to /mnt/netapp2/Store_uni//home/ulc/cursos/curso368/aihpc_outputs/ddp_2gpu/eval_nbest_predictions.json.
+***** eval metrics *****
+  epoch                   =        4.0
+  eval_exact_match        =       76.6
+  eval_f1                 =    80.7491
+  eval_runtime            = 0:00:01.37
+  eval_samples            =        500
+  eval_samples_per_second =    364.362
+  eval_steps_per_second   =     30.606
+End: Wed Oct 28 09:05:05 PM CET 2026
+Total wall-clock time: 432 seconds
+Total wall-clock time: 7 min 12 s
